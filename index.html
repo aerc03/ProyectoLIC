@@ -50,7 +50,6 @@
         <ul>
           <li class="active"><a href="#header">Home</a></li>
           <li><a href="#about">Acciones</a></li>
-          <li><a href="#resume">Retiro</a></li>
           <li><a href="#services">Historial</a></li>
           <li><a href="#portfolio">Grafico</a></li>
           <li><a href="#contact">Log Out</a></li>
@@ -72,6 +71,7 @@
   <section id="about" class="about">
 
     <!-- ======= About Me ======= -->
+    <!-- 
     <div class="about-me container">
 
       <div class="section-title">
@@ -114,50 +114,144 @@
         </div>
       </div>
 
-    </div><!-- End About Me -->
+    </div>End About Me -->
 
+    <!-- Modal Deposito-->
+    <div class="modal fade" id="DepositoModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hacer Deposito</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" role="form" class="php-email-form mt-4">
+              <div class="form-group">
+                <input type="number" class="form-control" name="Monto" id="monto" placeholder="Monto" data-rule="minlen:4" data-msg="Ingresar el monto del deposito..." />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
+                <div class="validate"></div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Retiro-->
+    <div class="modal fade" id="RetiroModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hacer Deposito</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" role="form" class="php-email-form mt-4">
+              <div class="form-group">
+                <input type="number" class="form-control" name="Monto" id="monto" placeholder="Monto" data-rule="minlen:4" data-msg="Ingresar el monto del deposito..." />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
+                <div class="validate"></div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Pago-->
+    <div class="modal fade" id="PagoModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hacer Deposito</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" role="form" class="php-email-form mt-4">
+              <div class="form-group">
+                <select name="OS" class="form-control">
+                  <option selected value="0"> Elige una opción </option>
+                  <option value="1">Energía</option> 
+                  <option value="2">Agua</option> 
+                  <option value="3">Otros</option>
+                </select>
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" name="Monto" id="monto" placeholder="Monto" data-rule="minlen:4" data-msg="Ingresar el monto del deposito..." />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
+                <div class="validate"></div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- ======= Counts ======= -->
     <div class="counts container">
 
       <div class="row">
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
           <div class="count-box">
-            <i class="icofont-simple-smile"></i>
-            <span data-toggle="counter-up">232</span>
-            <p>Happy Clients</p>
+            <i class="icofont-ui-add"></i>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DepositoModal">
+              Depositar
+            </button>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+        <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
           <div class="count-box">
-            <i class="icofont-document-folder"></i>
-            <span data-toggle="counter-up">521</span>
-            <p>Projects</p>
+            <i class="icofont-ui-remove"></i>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#RetiroModal">
+              Retirar
+            </button>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+        <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
           <div class="count-box">
-            <i class="icofont-live-support"></i>
-            <span data-toggle="counter-up">1,463</span>
-            <p>Hours Of Support</p>
+            <i class="icofont-pay"></i>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#PagoModal">
+              Pago
+            </button>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="icofont-users-alt-5"></i>
-            <span data-toggle="counter-up">15</span>
-            <p>Hard Workers</p>
-          </div>
-        </div>
 
       </div>
 
     </div><!-- End Counts -->
 
-    <!-- ======= Skills  ======= -->
+    <!-- ======= Skills  ======= 
     <div class="skills container">
 
       <div class="section-title">
@@ -218,9 +312,9 @@
 
       </div>
 
-    </div><!-- End Skills -->
+    </div> End Skills -->
 
-    <!-- ======= Interests ======= -->
+    <!-- ======= Interests ======= 
     <div class="interests container">
 
       <div class="section-title">
@@ -302,9 +396,9 @@
         </div>
       </div>
 
-    </div><!-- End Interests -->
+    </div> End Interests -->
 
-    <!-- ======= Testimonials ======= -->
+    <!-- ======= Testimonials ======= 
     <div class="testimonials container">
 
       <div class="section-title">
@@ -370,7 +464,7 @@
 
       </div>
 
-    </div><!-- End Testimonials  -->
+    </div> End Testimonials  -->
 
   </section><!-- End About Section -->
 
@@ -456,51 +550,27 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-4 col-md-6 align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="">Lorem Ipsum</a></h4>
-            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            <div class="icon">$100</div>
+            <h4><a href="">Deposito</a></h4>
+            <p>Comentario...</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+        <div class="col-lg-4 col-md-6 align-items-stretch mt-4 mt-md-0">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="">Sed ut perspiciatis</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <div class="icon">$50</div>
+            <h4><a href="">Retiro</a></h4>
+            <p>Comentario...</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+        <div class="col-lg-4 col-md-6 align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="">Magni Dolores</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-world"></i></div>
-            <h4><a href="">Nemo Enim</a></h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-slideshow"></i></div>
-            <h4><a href="">Dele cardo</a></h4>
-            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-arch"></i></div>
-            <h4><a href="">Divera don</a></h4>
-            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            <div class="icon">$30</i></div>
+            <h4><a href="">Pago - Energía</a></h4>
+            <p>Comentario...</p>
           </div>
         </div>
 
@@ -514,8 +584,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
+        <h2>Historial</h2>
+        <p>Mis Movimientos</p>
       </div>
 
       <div class="row">
