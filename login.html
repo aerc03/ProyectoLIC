@@ -12,7 +12,7 @@
 
   <div class="grid">
 
-    <form action="https://httpbin.org/post" method="POST" class="form login">
+    <div class="form login">
 
       <div class="form__field">
         <label for="login__password"><svg class="icon">
@@ -22,10 +22,10 @@
       </div>
 
       <div class="form__field">
-        <input type="submit" value="Sign In">
+        <input type="submit" onclick="IniciarSesion()" value="Sign In">
       </div>
 
-    </form>
+    </div>
 
 
   </div>
@@ -43,7 +43,8 @@
   </svg>
 
 </body>
-<!-- partial -->
+
+<script src="js/js.js"></script>
   
 </body>
 </html>

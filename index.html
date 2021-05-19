@@ -35,7 +35,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body onload="setPersonalData()">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
@@ -44,7 +44,7 @@
       <h1><a href="index.html">Pokémon Bank</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>Nombre del cliente - <span>Numero de cuenta</span> </h2>
+      <h2 id="info"></h2>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -52,7 +52,7 @@
           <li><a href="#about">Acciones</a></li>
           <li><a href="#services">Historial</a></li>
           <li><a href="#portfolio">Grafico</a></li>
-          <li><a href="#contact">Log Out</a></li>
+          <li><a href="#" onclick="CerrarSesion()">Log Out</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -718,6 +718,8 @@
           }
         });
   </script>
+
+  <script src="js/js.js"></script>
 
 </body>
 
