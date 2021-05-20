@@ -133,14 +133,14 @@
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
+                <textarea id="comentario" class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
                 <div class="validate"></div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" onclick="HacerMovimiento(1)" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -159,18 +159,18 @@
           <div class="modal-body">
             <form action="" method="post" role="form" class="php-email-form mt-4">
               <div class="form-group">
-                <input type="number" class="form-control" name="Monto" id="monto" placeholder="Monto" data-rule="minlen:4" data-msg="Ingresar el monto del deposito..." />
+                <input type="number" class="form-control" name="Monto" id="montoR" placeholder="Monto" data-rule="minlen:4" data-msg="Ingresar el monto del deposito..." />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
+                <textarea id="comentarioR" class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
                 <div class="validate"></div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" onclick="HacerMovimiento(2)" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -189,7 +189,7 @@
           <div class="modal-body">
             <form action="" method="post" role="form" class="php-email-form mt-4">
               <div class="form-group">
-                <select name="OS" class="form-control">
+                <select id="Opciones" name="OS" class="form-control">
                   <option selected value="0"> Elige una opción </option>
                   <option value="1">Energía</option> 
                   <option value="2">Agua</option> 
@@ -198,18 +198,18 @@
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" name="Monto" id="monto" placeholder="Monto" data-rule="minlen:4" data-msg="Ingresar el monto del deposito..." />
+                <input type="number" class="form-control" name="Monto" id="montoS" placeholder="Monto" data-rule="minlen:4" data-msg="Ingresar el monto del deposito..." />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="comentario" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
+                <textarea id="comentarioS" class="form-control" name="comentarioS" rows="5" data-rule="required" data-msg="Comentario..." placeholder="Comentario..."></textarea>
                 <div class="validate"></div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" onclick="HacerMovimiento(3)" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
@@ -549,30 +549,8 @@
         <p>Acciones</p>
       </div>
 
-      <div class="row">
-        <div class="col-lg-4 col-md-6 align-items-stretch">
-          <div class="icon-box">
-            <div class="icon">$100</div>
-            <h4><a href="">Deposito</a></h4>
-            <p>Comentario...</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 align-items-stretch mt-4 mt-md-0">
-          <div class="icon-box">
-            <div class="icon">$50</div>
-            <h4><a href="">Retiro</a></h4>
-            <p>Comentario...</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 align-items-stretch mt-4 mt-lg-0">
-          <div class="icon-box">
-            <div class="icon">$30</i></div>
-            <h4><a href="">Pago - Energía</a></h4>
-            <p>Comentario...</p>
-          </div>
-        </div>
+      <div id="Historial" class="row">
+        
 
       </div>
 
@@ -701,26 +679,8 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var myChart = new Chart(ctx, {
-          type: 'pie',
-          data: {
-            labels: ["Deposito", "Pagos", "Retiros"],
-            datasets: [{
-              backgroundColor: [
-                "#2ecc71",
-                "#f1c40f",
-                "#e74c3c"
-              ],
-              data: [10,2,4]
-            }]
-          }
-        });
-  </script>
-
   <script src="js/js.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>
